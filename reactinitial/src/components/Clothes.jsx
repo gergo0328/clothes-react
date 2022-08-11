@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Clothes.css";
 
 
-function Clothes({ type, gender, brand, color }) {
+function Clothes({ type, gender, product }) {
   const [isVisible, setIsVisible] = useState(false);
   const [buttonText, setButtonText] = useState("Show more");
 
@@ -21,10 +21,9 @@ function Clothes({ type, gender, brand, color }) {
 
   return (
     <>
-    <h2>{type}</h2>
-    <h2>{gender}</h2>
-    <h3 className={isVisible ? "" : "hidden"}>{brand}</h3>
-    <h3 className={isVisible ? "" : "hidden"}>{color}</h3>
+    <h2>{type} {gender}</h2>
+    <h3 className={isVisible ? "" : "hidden"}>{product}</h3>
+    {/* <h3 className={isVisible ? "" : "hidden"}>{color}</h3> */}
     <button onClick={visibilityHandler}>{buttonText}</button>
     </>
   )

@@ -25,6 +25,7 @@ const App = () => {
             key={index}
             type={clothes.type}
             gender={clothes.gender}
+            product={clothes.product}
           />
         ))
       ) : (
